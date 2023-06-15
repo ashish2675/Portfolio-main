@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7582d59e70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!--<li><a href="#services">Services</a></li>-->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web / App Developer</p>
+                <h1>Hi, I am <span>Ashish</span><br>Jose from India</h1>
+            </div>
+        </div>
+    </div>
+<!-----------about---------->
+    <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/about.PNG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>"Hi, I'm Ashish Jose, a fourth-year B.Tech student at VIT Bhopal University. I am proficient in Flutter, Dart and Java and have a keen interest in app development and programming.Looking ahead, I am excited to explore career opportunities in app development and programming, and am dedicated to continuing my education and professional development."</p>
+               
+                <div class="tab-titles">
+               <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+               <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    
+                    <li><span>App Devlopment</span><br>Flutter, Dart</li>
+                    <li><span>Programming</span><br>Java, Python, SQL</li>
+                    
+                    <li><span>Web Design</span><br>Html, Css</li>
+                </ul>
+            </div>
+            
+            <div class="tab-contents" id="education">
+                <ul>
+                    
+                    <li><span>2018</span><br>(Class X) Vandana Convent School, Guna[M.P]</li>
+                    <li><span>2020</span><br>(Class XII) Vandana Convent School, Guna[M.P]</li>
+                    <li><span>2024(Ongoing)</span><br>B.Tech from VIT Bhopal </li>
+                </ul>
+            </div>
+            </div>
+    </div>
+</div>
+</div>
+<!-----------service----------->
+
+<!------port folio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./Images/work-1.png">
+                <div class="layer">
+                    <h3>Slip-Less</h3>
+                    <p>It is a desktop and android application which is built for the ease of local level shopkeepers. This application has features of such as product scan, invoice generation, transaction history, product analytics and multiple language access i.e; Hindi and English.</p>
+                    <a href="https://github.com/ashish2675/ShopEzy_App"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./Images/work-2.png">
+                <div class="layer">
+                    <h3>Finance Guru</h3>
+                    <p>A money manager app made in Flutter to help users track their expenses, manage their budget and achieve their financial goals.</p>
+                    <a href="https://github.com/ashish2675/money_manager/tree/main"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./Images/work-3.png">
+                <div class="layer">
+                    <h3>Basic Whatsapp</h3>
+                    <p>Basic whatsapp clone</p>
+                    <a href="https://github.com/ashish2675/basic-whatsapp"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--<a href="#" class="btn">See more</a>-->
+    </div>
+</div>
+<!-------contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> ashish.jose2020@vitbhopal.ac.in</p>
+                <p><i class="fa-solid fa-square-phone"></i> 7389422066</p>
+                <div class="social-icons">
+                    <a href="https://github.com/ashish2675 "><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ashishjose2675/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Ashish Jose.pdf" download class="btn btn2">Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ashish.</p>
+    </div>
+</div>
+  
+  
+ 
+ <script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+ </script> 
+
+ <script>
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+ </script>
+ <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxvAQENaour9d-I8m1x4BIYK8inEMJcOi8keivITV39SLfwGu_ys3z-EA2Uklpmi3pe/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            };5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
